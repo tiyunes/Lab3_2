@@ -1,0 +1,2 @@
+Time of creation the sparse matrix based on B tree = 0.0174 ms
+Time of finding the random element in the sparse matrix based on B Tree = 0.0629 ms
