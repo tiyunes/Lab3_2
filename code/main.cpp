@@ -404,7 +404,7 @@ int main()
         }
     }
 
-//    TimeVector(cmpKey, sorter2);
+    TimeVector(cmpKey, sorter2);
 //    TimeMatrix(vPair, 1, 3, 0, compMatrix);
     TestSFS();
     TestSparseVector();

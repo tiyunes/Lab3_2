@@ -18,10 +18,10 @@ void TimeVector(function<bool(TPair<int, int>, TPair<int, int>)> cmp,
     int r;
     ofstream file("vector.txt");
     ofstream fout("time_vector.txt");
-    ofstream graphD1("graphD1.txt");
-    ofstream graphD2("graphD2.txt");
-    ofstream graphS1("graphS1.txt");
-    ofstream graphS2("graphS2.txt");
+    ofstream graphD1("time_create_dict.txt");
+    ofstream graphD2("time_get_dict.txt");
+    ofstream graphS1("time_create_seq.txt");
+    ofstream graphS2("time_get_seq.txt");
 
     for (int i = 0; i < N; i++)
     {
@@ -83,8 +83,8 @@ void TimeVector(function<bool(TPair<int, int>, TPair<int, int>)> cmp,
         fprintf(gnuplotP, "set title 'Time of creating'\n");
         fprintf(gnuplotP, "set xrange [*:*]\n");
         fprintf(gnuplotP, "set yrange [*:*]\n");
-        fprintf(gnuplotP, "plot \"graphD1.txt\"  using 1:2 w lines title \"Vector based on dictionary\"\n");
-        fprintf(gnuplotP, "plot \"graphS1.txt\"  using 1:2 w lines lc rgb \"blue\" title \"Vector based on sorted sequence\"\n");
+        fprintf(gnuplotP, "plot \"time_create_dict.txt\"  using 1:2 w lines title \"Vector based on dictionary\"\n");
+        fprintf(gnuplotP, "plot \"time_create_seq.txt\"  using 1:2 w lines lc rgb \"blue\" title \"Vector based on sorted sequence\"\n");
         fprintf(gnuplotP, "unset multiplot\n");
         fflush(gnuplotP);
         fprintf(gnuplotP,"exit \n");
@@ -103,8 +103,8 @@ void TimeVector(function<bool(TPair<int, int>, TPair<int, int>)> cmp,
         fprintf(gnuP, "set title 'Time of getting the random element'\n");
         fprintf(gnuP, "set xrange [*:*]\n");
         fprintf(gnuP, "set yrange [*:*]\n");
-        fprintf(gnuP, "plot \"graphD2.txt\"  using 1:2 w lines title \"Vector based on dictionary\"\n");
-        fprintf(gnuP, "plot \"graphS2.txt\"  using 1:2 w lines lc rgb \"blue\" title \"Vector based on sorted sequence\"\n");
+        fprintf(gnuP, "plot \"time_get_dict.txt\"  using 1:2 w lines title \"Vector based on dictionary\"\n");
+        fprintf(gnuP, "plot \"time_get_seq.txt\"  using 1:2 w lines lc rgb \"blue\" title \"Vector based on sorted sequence\"\n");
         fprintf(gnuP, "unset multiplot\n");
         fflush(gnuP);
         fprintf(gnuP,"exit \n");
