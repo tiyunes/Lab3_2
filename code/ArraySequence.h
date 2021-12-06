@@ -30,7 +30,7 @@ public:
     void Reverse() override;
     Sequence<T>* GetSubsequence(int startIndex, int endIndex) override;
     Sequence<T>* Concat(Sequence<T> *l) override;
-    ~ArraySequence();
+    ~ArraySequence<T>();
 private:
     DynamicArray<T>* items;
 };
@@ -201,7 +201,11 @@ Sequence<T>* ArraySequence<T>::Concat(Sequence <T> *l)
 template<class T>
 ArraySequence<T>::~ArraySequence()
 {
-    delete[] this->items;
+    if (this->items != nullptr)
+    {
+
+        delete this->items;
+    }
 }
 
 

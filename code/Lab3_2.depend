@@ -1,0 +1,163 @@
+# depslib dependency file v1.0
+1638803086 source:c:\users\yunes\documents\c++\lab3_2\code\main.cpp
+	<iostream>
+	<utility>
+	<exception>
+	<string>
+	<fstream>
+	<sstream>
+	<cstdio>
+	"dictionary.h"
+	"STUDENTS.H"
+	"histogram.h"
+	"benchmark.h"
+	"ArraySequence.h"
+	"SortedSequence.h"
+	"SFS.h"
+	"ISorter.h"
+	"sparse_matrix.h"
+	"sparse_vector.h"
+	"SparseVectorDict.h"
+	"SparseVectorSeq.h"
+	"BTree.h"
+	"BTree_node.h"
+	"tests.h"
+
+1638774719 c:\users\yunes\documents\c++\lab3_2\code\dictionary.h
+	"BinaryTree.h"
+	<functional>
+	<exception>
+	<utility>
+	<iostream>
+
+1638774861 c:\users\yunes\documents\c++\lab3_2\code\binarytree.h
+	"SEQUENCE.H"
+	"LinkedListSequence.h"
+	"ArraySequence.h"
+	"BinaryTreeNode.h"
+	"STUDENTS.H"
+	"TEACHER.H"
+	<vector>
+	<algorithm>
+	<functional>
+	<stdexcept>
+
+1638774099 c:\users\yunes\documents\c++\lab3_2\code\sequence.h
+	"LinkedList.h"
+	"DynamicArray.h"
+
+1638767474 c:\users\yunes\documents\c++\lab3_2\code\linkedlist.h
+	<stdexcept>
+	<iostream>
+
+1638774882 c:\users\yunes\documents\c++\lab3_2\code\dynamicarray.h
+
+1638767822 c:\users\yunes\documents\c++\lab3_2\code\linkedlistsequence.h
+	"SEQUENCE.H"
+	"LinkedList.h"
+
+1638774874 c:\users\yunes\documents\c++\lab3_2\code\arraysequence.h
+	"SEQUENCE.H"
+	"DynamicArray.h"
+
+1638768330 c:\users\yunes\documents\c++\lab3_2\code\binarytreenode.h
+	"SEQUENCE.H"
+	<utility>
+	<functional>
+	<vector>
+	"STUDENTS.H"
+	"TEACHER.H"
+
+1638723801 c:\users\yunes\documents\c++\lab3_2\code\students.h
+	<string>
+
+1622830713 c:\users\yunes\documents\c++\lab3_2\code\teacher.h
+
+1638190883 c:\users\yunes\documents\c++\lab3_2\code\histogram.h
+	"dictionary.h"
+	"STUDENTS.H"
+	"SEQUENCE.H"
+
+1638806431 c:\users\yunes\documents\c++\lab3_2\code\benchmark.h
+	<chrono>
+	<fstream>
+	"sparse_matrix.h"
+	"sparse_vector.h"
+	"SparseVectorDict.h"
+	"SparseVectorSeq.h"
+	"dictionary.h"
+
+1638723803 c:\users\yunes\documents\c++\lab3_2\code\sparse_matrix.h
+	"BTree.h"
+	"BTree_node.h"
+	"dictionary.h"
+
+1638723803 c:\users\yunes\documents\c++\lab3_2\code\btree.h
+	"SEQUENCE.H"
+	"LinkedListSequence.h"
+	"ArraySequence.h"
+	"BTree_node.h"
+	<vector>
+	<algorithm>
+	<functional>
+	<stdexcept>
+
+1638723803 c:\users\yunes\documents\c++\lab3_2\code\btree_node.h
+	"SEQUENCE.H"
+	<utility>
+	<functional>
+	<vector>
+
+1638774537 c:\users\yunes\documents\c++\lab3_2\code\sparse_vector.h
+	"SortedSequence.h"
+	"dictionary.h"
+	<vector>
+
+1638723802 c:\users\yunes\documents\c++\lab3_2\code\sortedsequence.h
+	"SEQUENCE.H"
+	<functional>
+
+1638774640 c:\users\yunes\documents\c++\lab3_2\code\sparsevectordict.h
+	"sparse_vector.h"
+	"dictionary.h"
+
+1638723800 c:\users\yunes\documents\c++\lab3_2\code\sparsevectorseq.h
+	"sparse_vector.h"
+	"SortedSequence.h"
+
+1638723798 c:\users\yunes\documents\c++\lab3_2\code\sfs.h
+	"SEQUENCE.H"
+	"SortedSequence.h"
+	"dictionary.h"
+	"MergeSort.h"
+	<string>
+	<utility>
+
+1638723799 c:\users\yunes\documents\c++\lab3_2\code\mergesort.h
+	"SEQUENCE.H"
+	"ArraySequence.h"
+	<functional>
+
+1638455249 c:\users\yunes\documents\c++\lab3_2\code\isorter.h
+	<functional>
+	<utility>
+	<vector>
+	<algorithm>
+	"MergeSort.h"
+
+1638723801 c:\users\yunes\documents\c++\lab3_2\code\tests.h
+	<cassert>
+	"SFS.h"
+	"SFS_Seq.h"
+	"SFS_Dict.h"
+
+1638723794 c:\users\yunes\documents\c++\lab3_2\code\sfs_seq.h
+	"SFS.h"
+	"SortedSequence.h"
+	<string>
+
+1638723797 c:\users\yunes\documents\c++\lab3_2\code\sfs_dict.h
+	<iostream>
+	"SFS.h"
+	"dictionary.h"
+

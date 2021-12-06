@@ -269,6 +269,17 @@ public:
             return (this->Get() == n->Get() && this->GetLeft() == n->GetLeft() && this->GetRight() == n->GetRight());
         }
     }
+    ~BinaryTreeNode<T>()
+    {
+        if (this->left != nullptr)
+        {
+            delete this->left;
+        }
+        if (this->right != nullptr)
+        {
+            delete this->right;
+        }
+    }
 public:
     pair<BinaryTreeNode<T>*, BinaryTreeNode<T>*> Min(BinaryTreeNode<T>* n)
     {

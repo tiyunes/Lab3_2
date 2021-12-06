@@ -19,7 +19,7 @@ public:
     void Set(int index, T value);
     void Resize(int newSize);
     void ChangeSize(int newSize);
-    ~DynamicArray();
+    ~DynamicArray<T>();
 
 protected:
 
@@ -186,7 +186,11 @@ void DynamicArray<T>::Reverse()
 template<class T>
 DynamicArray<T>::~DynamicArray()
 {
-    delete[] this->values;
+    if (this->values != nullptr)
+    {
+        delete this->values;
+    }
+
 }
 
 #endif // DYNAMICARRAY_H

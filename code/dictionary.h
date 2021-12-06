@@ -62,6 +62,7 @@ template<class TKey, class TElement>
 class IDictionary
 {
     friend class TPair<TKey, TElement>;
+
 private:
     BinaryTree<TPair<TKey, TElement>>* tree;
     function<bool(TPair<TKey, TElement>, TPair<TKey, TElement>)> cmp;
@@ -191,6 +192,14 @@ public:
         else
         {
             throw std::out_of_range("Invalid key");
+        }
+    }
+
+    ~IDictionary<TKey, TElement>()
+    {
+        if (this->tree != nullptr)
+        {
+            delete tree;
         }
     }
 

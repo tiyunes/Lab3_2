@@ -56,7 +56,6 @@ public:
         }
         else if (this->root->Get() == item)
         {
-
             return this->root;
         }
         else if (cmp(this->root->Get(), item))
@@ -422,6 +421,13 @@ public:
         if (n != nullptr)
         {
             s->Append(n->Get());
+        }
+    }
+    ~BinaryTree<T>()
+    {
+        if (this != nullptr && this->root != nullptr)
+        {
+            delete root;
         }
     }
 private:

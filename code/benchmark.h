@@ -20,8 +20,10 @@ void TimeVector(function<bool(TPair<int, int>, TPair<int, int>)> cmp,
     ofstream fout("time_vector.txt");
     ofstream graphD1("time_create_dict.txt");
     ofstream graphD2("time_get_dict.txt");
+    ofstream graphD3("time_find_dict.txt");
     ofstream graphS1("time_create_seq.txt");
     ofstream graphS2("time_get_seq.txt");
+    ofstream graphS3("time_find_seq.txt");
 
     for (int i = 0; i < N; i++)
     {
@@ -69,6 +71,28 @@ void TimeVector(function<bool(TPair<int, int>, TPair<int, int>)> cmp,
         fout << "Time of getting the random element in the sparse vector with size: " <<
         v->size() << " based on sorted sequence = " << time4 << " ms" << endl;
         graphS2 << v->size() << " " << time4 << endl;
+
+        auto start5 = chrono::steady_clock::now();
+        bool z = sparseVector->Contains(r % (v->size() / 2));
+        auto end5 = chrono::steady_clock::now();
+        chrono::duration<double, milli> duration5 = end5 - start5;
+        double time5 = duration5.count();
+        fout << "Time of checking the random element in the sparse vector with size: " <<
+        v->size() << " based on dictionary = " << time5 << " ms" << endl;
+        graphD3 << v->size() << " " << time5 << endl;
+
+        auto start6 = chrono::steady_clock::now();
+        bool w = sparseVector3->Contains(r % (v->size() / 2));
+        auto end6 = chrono::steady_clock::now();
+        chrono::duration<double, milli> duration6 = end6 - start6;
+        double time6 = duration6.count();
+        fout << "Time of checking the random element in the sparse vector with size: " <<
+        v->size() << " based on sorted sequence = " << time6 << " ms" << endl;
+        graphS3 << v->size() << " " << time6 << endl;
+
+        delete v;
+        delete sparseVector;
+        delete sparseVector3;
     }
 
     FILE *gnuplotP = popen("gnuplot -persist", "w");
@@ -109,6 +133,26 @@ void TimeVector(function<bool(TPair<int, int>, TPair<int, int>)> cmp,
         fflush(gnuP);
         fprintf(gnuP,"exit \n");
         pclose(gnuP);
+    }
+
+    FILE *plot = popen("gnuplot -persist", "w");
+    if (plot)
+    {
+        fprintf(plot, "set encoding utf8\n");
+        fprintf(plot, "set terminal windows\n");
+        fprintf(plot, "set output \"plotGraph3.pdf\" \n");
+        fprintf(plot, "set multiplot layout 2,1 \n");
+        fprintf(plot, "set xlabel 'Size of vector'\n");
+        fprintf(plot, "set ylabel 'Time (in ms)'\n");
+        fprintf(plot, "set title 'Time of checking the random element for being in the sparse vector'\n");
+        fprintf(plot, "set xrange [*:*]\n");
+        fprintf(plot, "set yrange [*:*]\n");
+        fprintf(plot, "plot \"time_find_dict.txt\"  using 1:2 w lines title \"Vector based on dictionary\"\n");
+        fprintf(plot, "plot \"time_find_seq.txt\"  using 1:2 w lines lc rgb \"blue\" title \"Vector based on sorted sequence\"\n");
+        fprintf(plot, "unset multiplot\n");
+        fflush(plot);
+        fprintf(plot,"exit \n");
+        pclose(plot);
     }
 
 }

@@ -101,7 +101,14 @@ public:
         Node<T> *buff = new Node<T>(item, nullptr);
         buff = this->first;
         this->first = this->first->next;
-        delete buff;
+        if (buff != nullptr)
+        {
+            delete buff;
+        }
+        else
+        {
+            return;
+        }
         this->Size--;
     }
 
@@ -247,12 +254,15 @@ public:
         return concatList;
     }
 
-    ~LinkedList()
+    ~LinkedList<T>()
     {
-     for (int i = 0; i < this->Size; i++)
-     {
-         this->Pop();
-     }
+        if (this != nullptr)
+        {
+            for (int i = 0; i < this->Size; i++)
+             {
+                 this->Pop();
+             }
+        }
     }
 
 

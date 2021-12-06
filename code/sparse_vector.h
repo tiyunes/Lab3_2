@@ -16,6 +16,7 @@ public:
     virtual SparseVector<T>* Sum (SparseVector<T>* sv1) = 0;
     virtual SparseVector<T>* Mult (int scalar) = 0;
     virtual T ScalarProd (SparseVector<T>* sv1) = 0;
+    virtual ~SparseVector<T>() = default;
 };
 
 

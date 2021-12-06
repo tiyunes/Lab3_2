@@ -111,9 +111,12 @@ public:
         return concatSequence;
     }
 
-    ~LinkedListSequence()
+    ~LinkedListSequence<T>()
     {
-        delete[] this->items;
+        if (this != nullptr && this->items != nullptr)
+        {
+            delete this->items;
+        }
     }
 protected:
 

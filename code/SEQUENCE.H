@@ -22,6 +22,6 @@ public:
     virtual void Pop() = 0;
     virtual void Reverse() = 0;
     virtual Sequence<T>* Concat(Sequence<T> *l) = 0;
-    //virtual ~Sequence<T>() = default;
+//    virtual ~Sequence<T>() { };
 };
 #endif // SEQUENCE_H

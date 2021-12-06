@@ -37,56 +37,55 @@ function<bool(int, int)>compInt2 = comp2;
 
 int main()
 {
-    pair<int, int> p0;
-    p0.first = 0;
-    p0.second = 0;
-    TPair<int, int> pair0(p0);
-    TPair<int, int> l0(p0);
-
-    pair<int, int> p1;
-    p1.first = 11;
-    p1.second = 12;
-    TPair<int, int> pair1(p1);
-    TPair<int, int> l1(p1);
-
-    pair<int, int> p2;
-    p2.first = 4;
-    p2.second = 1;
-    TPair<int, int> pair2(p2);
-    TPair<int, int> l2(p2);
-
-    pair<int, int> p3;
-    p3.first = 1;
-    p3.second = 10;
-    TPair<int, int> pair3(p3);
-    TPair<int, int> l3(p3);
-
-    vector<int>* v = new vector<int>;
-    v->push_back(4);
-    v->push_back(0);
-    v->push_back(3);
-    SparseVector<int>* sparseVector = (SparseVector<int>*) new SparseVectorDict<int>(v, 0, cmpKey);
-    cout << sparseVector->Get(1) << endl;
-
-    vector<TPair<int, TPair<int, int>>>* vPair = new vector<TPair<int, TPair<int, int>>>;
-    pair<int, TPair<int, int>> p4;
-    p4.second = l1;
-    p4.first = 2;
-    TPair<int, TPair<int, int>> pair4(p4);
-
-    pair<int, TPair<int, int>> p5;
-    p5.second = l2;
-    p5.first = 3;
-    TPair<int, TPair<int, int>> pair5(p5);
-
-    pair<int, TPair<int, int>> p6;
-    p6.second = l3;
-    p6.first = 7;
-    TPair<int, TPair<int, int>> pair6(p6);
-
-    vPair->push_back(pair4);
-    vPair->push_back(pair5);
-    vPair->push_back(pair6);
+//    pair<int, int> p0;
+//    p0.first = 0;
+//    p0.second = 0;
+//    TPair<int, int> pair0(p0);
+//    TPair<int, int> l0(p0);
+//
+//    pair<int, int> p1;
+//    p1.first = 11;
+//    p1.second = 12;
+//    TPair<int, int> pair1(p1);
+//    TPair<int, int> l1(p1);
+//
+//    pair<int, int> p2;
+//    p2.first = 4;
+//    p2.second = 1;
+//    TPair<int, int> pair2(p2);
+//    TPair<int, int> l2(p2);
+//
+//    pair<int, int> p3;
+//    p3.first = 1;
+//    p3.second = 10;
+//    TPair<int, int> pair3(p3);
+//    TPair<int, int> l3(p3);
+//
+//    vector<int>* v = new vector<int>;
+//    v->push_back(4);
+//    v->push_back(0);
+//    v->push_back(3);
+//    SparseVector<int>* sparseVector = (SparseVector<int>*) new SparseVectorDict<int>(v, 0, cmpKey);
+//
+//    vector<TPair<int, TPair<int, int>>>* vPair = new vector<TPair<int, TPair<int, int>>>;
+//    pair<int, TPair<int, int>> p4;
+//    p4.second = l1;
+//    p4.first = 2;
+//    TPair<int, TPair<int, int>> pair4(p4);
+//
+//    pair<int, TPair<int, int>> p5;
+//    p5.second = l2;
+//    p5.first = 3;
+//    TPair<int, TPair<int, int>> pair5(p5);
+//
+//    pair<int, TPair<int, int>> p6;
+//    p6.second = l3;
+//    p6.first = 7;
+//    TPair<int, TPair<int, int>> pair6(p6);
+//
+//    vPair->push_back(pair4);
+//    vPair->push_back(pair5);
+//    vPair->push_back(pair6);
 
     int var = 0;
     while (var != 5)
@@ -405,7 +404,7 @@ int main()
     }
 
     TimeVector(cmpKey, sorter2);
-//    TimeMatrix(vPair, 1, 3, 0, compMatrix);
+//   TimeMatrix(vPair, 1, 3, 0, compMatrix);
     TestSFS();
     TestSparseVector();
     TestSparseMatrix();

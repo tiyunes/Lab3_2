@@ -134,6 +134,14 @@ public:
             return mult;
         }
     }
+
+    ~SparseVectorDict<T>()
+    {
+        if (this->d != nullptr)
+        {
+            delete d;
+        }
+    }
 };
 
 
